@@ -12,4 +12,5 @@ def verify_user(name, passwd):
     if user and user["passwd"] == passwd:
         return user
     return None
+
     
