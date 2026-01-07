@@ -6,5 +6,5 @@ def get_db_connection():
         host = Config.db_host,
         user = Config.db_user,
         password = Config.db_password,
-        name = Config.db_name
+        database = Config.db_name
     )
