@@ -1,0 +1,2 @@
+A console-based Job Portal Management System developed using Python and MySQL.
+The system supports role-based access for Admin, Recruiter, and Job Seeker, allowing efficient job posting, applications, and user management.

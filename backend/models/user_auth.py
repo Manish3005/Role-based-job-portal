@@ -26,7 +26,7 @@ def verify_user():
     passwd = input("Enter password: ")
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT email, password_hash, role FROM users WHERE email = %s", (email,))
+    cursor.execute("SELECT id, email, password_hash, role FROM users WHERE email = %s", (email,))
     user = cursor.fetchone()
     cursor.close()
     conn.close()

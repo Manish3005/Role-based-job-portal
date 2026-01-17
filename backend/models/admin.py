@@ -1,13 +1,13 @@
 from db import get_db_connection
 
-def start():
+def start(user):
     while(True):
         print("\nAdmin panel")
         print("1.View All users")
         print("2.View All Companies")
         print("3.View All Jobs")
         print("4.Logout")
-        choice = input("Enter yr choice:")
+        choice = int(input("Enter yr choice:"))
         if(choice == 1):
             view_all_users()
         elif(choice == 2):
