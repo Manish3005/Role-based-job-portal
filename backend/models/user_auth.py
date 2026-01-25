@@ -21,9 +21,7 @@ def create_user():
     print(f"{role} created successfully!")
     return True
 
-def verify_user():
-    email = input("Enter email: ")
-    passwd = input("Enter password: ")
+def verify_user(email,passwd):
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     cursor.execute("SELECT id, email, password_hash, role FROM users WHERE email = %s", (email,))

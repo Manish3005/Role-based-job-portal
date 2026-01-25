@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Select Role</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body class="index-page">
 
@@ -13,17 +13,17 @@
         <div class="role-container">
             <div class="role-box">
                 <h2>Admin</h2>
-                <a href="admin_login.html">Login</a>
+                <a href="{{ url_for('admin_login') }}">Login</a>
             </div>
 
             <div class="role-box">
                 <h2>Recruiter</h2>
-                <a href="recruiter_login.html">Login</a>
+                <a href="{{ url_for('recruiter_login') }}">Login</a>
             </div>
 
             <div class="role-box">
                 <h2>Job Seeker</h2>
-                <a href="job_seeker_login.html">Login</a>
+                <a href="{{ url_for('job_seeker_login') }}">Login</a>
             </div>
         </div>
     </div>
