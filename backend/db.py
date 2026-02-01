@@ -8,3 +8,4 @@ def get_db_connection():
         password = Config.db_password,
         database = Config.db_name
     )
+    

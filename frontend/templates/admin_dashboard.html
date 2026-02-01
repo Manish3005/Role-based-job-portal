@@ -9,20 +9,41 @@
 <body class="dashboard-page">
     <div class="dashboard-header">
         <div class="tabs">
-            <button class="active">View All Users</button>
-            <button>View All Companies</button>
-            <button>View All Jobs</button>
+            <button class="tab-btn active" onclick="openTab('users')">View All Users</button>
+            <button class="tab-btn" onclick="openTab('companies')">View All Companies</button>
+            <button class="tab-btn" onclick="openTab('jobs')">View All Jobs</button>
         </div>
-        <div admin="admin-info">
+        <div class="admin-info">
             <div class="admin-text">
                 <span class="role">Admin</span>
                 <span class="name">Mani Shankar</span>
             </div>
-            <div class="profile-icon">
-                👤
-            </div>
+            <div class="profile-icon">👤</div>
         </div>
     </div>
+    <div class="dashboard-content">
+        <div id="users" class="content active">
+            <h2>All Users</h2>
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Created at</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="companies" class="content">
+            <h2>All Companies</h2>
+        </div>
+        <div id="jobs" class="content">
+            <h2>All Jobs</h2>
+        </div>
     </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

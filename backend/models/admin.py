@@ -27,9 +27,7 @@ def view_all_users():
     users = cursor.fetchall()
     cursor.close()
     conn.close()
-    print("\nAll Users:")
-    for u in users:
-        print(f"ID: {u['id']}, Email: {u['email']}, Role: {u['role']}, Active: {u['is_active']}, Created: {u['created_at']}")
+    return users
 
 def view_all_companies():
     conn = get_db_connection()
