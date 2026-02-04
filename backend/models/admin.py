@@ -36,25 +36,20 @@ def view_all_companies():
     companies = cursor.fetchall()
     cursor.close()
     conn.close()
-    print("\nAll Companies:")
-    for c in companies:
-        print(f"ID: {c['id']}, Name: {c['name']}, Website: {c['website']}, Email: {c['email']}, Contact: {c['contact_number']}")
+    return companies
 
 def view_all_jobs():
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     cursor.execute("""
-        SELECT jobs.id, jobs.title, jobs.location, jobs.salary, companies.name AS company_name
+        SELECT jobs.id, jobs.title, jobs.location, jobs.salary,jobs.posted_date, companies.name AS company_name
         FROM jobs
         JOIN companies ON jobs.company_id = companies.id
     """)
     jobs = cursor.fetchall()
     cursor.close()
     conn.close()
-    print("\nAll Jobs:")
-    for j in jobs:
-        print(f"ID: {j['id']}, Title: {j['title']}, Location: {j['location']}, Salary: {j['salary']}, Company: {j['company_name']}")
-
+    return jobs
 
 
 

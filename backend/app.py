@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from models.user_auth import verify_user
-from models.admin import view_all_users 
+from models.admin import view_all_users, view_all_companies, view_all_jobs
 
 app = Flask(__name__,
             template_folder="../frontend/templates",
@@ -38,6 +38,16 @@ def admin_login():
 def get_all_users():
     users = view_all_users()
     return jsonify(users)
+
+@app.route("/admin/companies")
+def get_all_companies():
+    companies = view_all_companies()
+    return jsonify(companies)
+
+@app.route("/admin/jobs")
+def get_all_jobs():
+    jobs = view_all_jobs()
+    return jsonify(jobs)
 
 @app.route("/recruiter-login", methods = ["GET","POST"])
 def recruiter_login():

@@ -135,7 +135,6 @@ body.index-page {
     background: #f5f7fa;
 }
 
-/* Header at top */
 .dashboard-header {
     display: flex;
     justify-content: space-between;
@@ -145,12 +144,10 @@ body.index-page {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Content below header */
 .dashboard-content {
     padding: 30px 40px;
 }
 
-/* Hide inactive tabs */
 .content {
     display: none;
 }
@@ -185,7 +182,6 @@ body.index-page {
     gap: 20px;
 }
 
-/* Text block */
 .admin-text {
     display: flex;
     flex-direction: column;
@@ -193,19 +189,16 @@ body.index-page {
     align-items: flex-end;
 }
 
-/* Admin word */
 .admin-text .role {
     font-size: 18px;
     font-weight: bold;
 }
 
-/* Name */
 .admin-text .name {
     font-size: 14px;
     color: #555;
 }
 
-/* SINGLE big profile icon */
 .profile-icon {
     width: 48px;
     height: 48px;
